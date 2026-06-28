@@ -1,0 +1,14 @@
+[window]
+dimensions = { columns = 130, lines = 36 }
+opacity = 0.7
+blur = true
+
+[font]
+normal = { family = "MesloLGS NF" , style = "Regular" }
+
+# [terminal]
+# Windows
+# shell = { program = "C:\\Program Files\\PowerShell\\7\\pwsh.exe" }
+# Linux
+# shell = { program = "/usr/bin/fish" }
+# shell = { program = "/usr/bin/zsh" }

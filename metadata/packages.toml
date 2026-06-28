@@ -1,0 +1,131 @@
+[network]
+vcs = "git"
+remote = "openssh"
+downloader = [
+    "wget",
+    "aria2"
+]
+sync = [
+    "syncthing",
+    "rclone"
+]
+data = "curl"
+format_json = "jq"
+transfer = "rsync"
+proxy = "mihomo"
+utils = [
+    "iputils",
+    "iproute2",
+    "nmap"
+    "bind-utils",
+    "tcpdump",
+    "mtr"
+]
+
+[terminal]
+shell = "fish"
+plugins_manager = "fisher"
+prompt = "tide"
+workspace = "zellij"
+file_manager = "yazi"
+editor = "neovim"
+information = "fastfetch"
+modern_utils = [
+    "gdu",
+    "ripgrep",
+    "fd",
+    "broot",
+    "bat",
+    "timg",
+    "hexyl",
+    "lazygit",
+    "gtop",
+    "btop",
+    "htop",
+    "tokei",
+    "hyperfine",
+    "fzf"
+]
+fontcfg = "fontconfig"
+archiver = [
+    "zip",
+    "unzip",
+    "tar",
+    "xz",
+    "zstd"
+    "7zip"
+]
+
+[development]
+build_system = [
+    "meson",
+    "cmake",
+    "automake",
+    "autoconf",
+    "libtool",
+    "m4",
+    "make",
+    "ninja"
+]
+compiler = [
+    "clang",
+    "gcc"
+]
+binary_utils = [
+    "binutils"
+]
+debugger = [
+    "lldb",
+    "gdb"
+]
+database = "bear"
+lsp = "clangd"
+formatter = "clang-format"
+patch = "patch"
+python = "python"
+py_pm = "pip"
+
+[desktop]
+server = "wayland"
+terminal = "alacritty"
+image_viewer = "feh"
+doc_viewer = [
+    "calibre",
+    "koreader"
+]
+pass_manager = "keepassxc"
+notepad = "obsidian"
+video_player = [
+    "vlc",
+    "mpv"
+]
+web_browser = [
+    "firefox",
+    "chrome"
+]
+multimedia_framework = "pipewire"
+
+[hardware]
+bluetooth = [
+    "bluez",
+    "bluez-utils"
+]
+network_manager = [
+    "networkmanager",
+    "iwd"
+]
+general_utils = [
+    "lshw",
+    "hwinfo",
+    "pciutils",
+    "usbutils",
+    "sensors",
+    "smartmontools"
+]
+gpu_benchmark = [
+    "glmark2",
+    "mesa-demo",
+    "mesa-utils",
+    "vkmark",
+    "vulkan-tools"
+]

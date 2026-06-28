@@ -1,0 +1,16 @@
+[user]
+name = ""
+password = ""
+group = "wheel"
+
+[locale]
+language = ""
+timezone = ""
+keymap = "us"
+ntp = true
+
+[host]
+hostname = "workspace-sora"
+
+[dns]
+nameserver = [ "1.1.1.1", "8.8.8.8" ]

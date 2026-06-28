@@ -1,0 +1,59 @@
+config:
+  raw.lxc: |
+    lxc.net.0.type = none
+    lxc.cgroup2.devices.allow = a
+    lxc.cgroup2.devices.allow = c 248:* rwm
+    lxc.cgroup2.devices.allow = c 10:237 rwm
+    lxc.cgroup2.devices.allow = b 7:* rwm
+    lxc.mount.entry = /dev/dma_heap dev/dma_heap none bind,optional,create=dir
+    lxc.hook.post-stop = /data/data/com.termux/files/home/.local/share/scripts/auto-pkill.sh
+  security.nesting: "true"
+  security.privileged: "true"
+  security.syscalls.intercept.mount.fuse: "true"
+
+devices:
+  X0:
+    path: /tmp/.X11-unix/X0
+    source: /data/data/com.termux/files/usr/tmp/.X11-unix/X0
+    type: disk
+  fuse:
+    mode: "0666"
+    path: /dev/fuse
+    source: /dev/fuse
+    type: unix-char
+  gpu:
+    type: gpu
+  kgsl:
+    mode: "0666"
+    path: /dev/kgsl-3d0
+    source: /dev/kgsl-3d0
+    type: unix-char
+  loop-control:
+    path: /dev/loop-control
+    source: /dev/loop-control
+    type: unix-char
+  loop43:
+    path: /dev/loop43
+    source: /dev/block/loop43
+    type: unix-block
+  root:
+    path: /
+    pool: default
+    type: disk
+  uinput:
+    path: /dev/uinput
+    type: unix-char
+  venus-dec:
+    mode: "0666"
+    path: /dev/video32
+    type: unix-char
+  venus-enc:
+    mode: "0666"
+    path: /dev/video33
+    type: unix-char
+  video0:
+    path: /dev/video0
+    type: unix-char
+  video1:
+    path: /dev/video1
+    type: unix-char
